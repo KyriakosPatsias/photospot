@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ImagesComponent } from './images/images.component';
+
+import { MatGridListModule, MatToolbarModule } from '@angular/material';
+import { ImageService } from './image.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImagesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatGridListModule,
+    MatToolbarModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,6 +11,8 @@ export class ImagesComponent implements OnInit {
 
   images: Image[];
 
+  selectedImage: Image;
+
   constructor(private imageService: ImageService) { }
 
   ngOnInit() {
@@ -19,6 +21,10 @@ export class ImagesComponent implements OnInit {
 
   getImages(): void {
     this.images = this.imageService.getImages();
+  }
+
+  onSelect(image: Image): void {
+    this.selectedImage = image;
   }
 
 }

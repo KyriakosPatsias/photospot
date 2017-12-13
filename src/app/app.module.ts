@@ -5,19 +5,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ImagesComponent } from './images/images.component';
 
-import { MatGridListModule, MatToolbarModule } from '@angular/material';
+import { MatGridListModule, MatToolbarModule, MatCardModule } from '@angular/material';
 import { ImageService } from './image.service';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImagesComponent
+    ImagesComponent,
+    ImageDetailComponent
   ],
   imports: [
     BrowserModule,
     MatGridListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]

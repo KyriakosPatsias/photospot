@@ -9,6 +9,8 @@ import { MatGridListModule, MatToolbarModule, MatCardModule } from '@angular/mat
 import { ImageService } from './image.service';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 
+import { FlexLayoutModule } from "@angular/flex-layout";
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
     BrowserModule,
     MatGridListModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]
